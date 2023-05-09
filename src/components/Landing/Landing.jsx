@@ -1,5 +1,6 @@
 import './Landing.scss'
-import { LandingCards } from '../Cards/LandingCards';
+import { LandingCard } from './LandingCard';
+import { LANDING_CARDS_DATA } from '../../data/LANDING_CARDS_DATA';
 
 export const Landing = () => {
   return (
@@ -22,7 +23,7 @@ export const Landing = () => {
           <h2>Las herramientas para tus objetivos</h2>
           <p>¿Quieres perder peso, tonificarte, reducir tu BMI o invertir en tu salud general? Te ofrecemos las funciones que necesitas para conseguirlo.</p>
           <div className="figure__container flex">
-            <LandingCards />
+            {LANDING_CARDS_DATA.map((item) => <LandingCard key={item.id} data={item} />)}
           </div>
         </section>
       </main>

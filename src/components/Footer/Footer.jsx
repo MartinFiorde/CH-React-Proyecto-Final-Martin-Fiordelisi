@@ -8,7 +8,7 @@ export const Footer = () => {
           <ul className="flex footer__nav">
             <li>
               <a href="https://www.coderhouse.com/" className="footer__media" target="_blank">
-                <img src="./img/facebook.png" alt="icono facebook link" />
+                <img src="../img/facebook.png" alt="icono facebook link" />
               </a>
             </li>
             <li>

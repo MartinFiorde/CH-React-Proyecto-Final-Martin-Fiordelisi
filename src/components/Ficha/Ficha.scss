@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+#ficha {
+  .card__ {
+    border-radius: 40px !important;
+
+    &text {
+      font-family: $secondFontFamily;
+
+      strong {
+        display: inline;
+      }
+    }
+
+    &img__content {
+      width: 250px;
+      height: 250px;
+      border-radius: 50% !important;
+    }
+  }
+}
