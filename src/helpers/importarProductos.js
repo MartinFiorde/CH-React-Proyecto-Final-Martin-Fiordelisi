@@ -4,6 +4,6 @@ export const importarProductos = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(PRODUCTOS_DATA)
-        }, 1000)
+        }, 200)
     })
 }
