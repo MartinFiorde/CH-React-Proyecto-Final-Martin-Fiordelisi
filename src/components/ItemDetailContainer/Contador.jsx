@@ -1,7 +1,7 @@
 import { useCount } from "./../../hooks/useCount";
 
-export const Contador = ({ precio, stock }) => {
-  const { count, aumentar, reducir } = useCount(1, 1, stock);
+export const Contador = ({ precio, contador }) => {
+  const { count, aumentar, reducir } = contador;
 
   return (
     <>
@@ -10,6 +10,7 @@ export const Contador = ({ precio, stock }) => {
           -
         </button>
         <p className="card-text py-0">{count}</p>
+        {/* <input className="card-text py-0" type="number" value={count} /> */}
         <button onClick={aumentar} className="btn py-2 ms-3 mb-3">
           +
         </button>

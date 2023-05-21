@@ -1,6 +1,30 @@
 import { Link } from "react-router-dom";
 import { Contador } from "./Contador";
-export const ItemDetail = ({ producto }) => {
+import { useEffect } from "react";
+
+export const ItemDetail = ({ producto, contador, agregar }) => {
+  // handler de evento React
+  const agregarAlCarrito = (event) => {
+    event.preventDefault();
+    console.log("React Click", event);
+    // funciones y variables clasicas JS
+    setTimeout(() => {}, 0);
+    setInterval(() => {}, 0);
+    console.log("React Click target.innerHTML", event.target.innerHTML);
+  };
+
+  //evento Clasico (montaje y desmontaje)
+  useEffect(() => {
+    // handler de evento React
+    const windowClickHandler = (event) => {
+      console.log("Window Click", event);
+    };
+    window.addEventListener("click", windowClickHandler);
+    return () => {
+      window.removeEventListener("click", windowClickHandler);
+    };
+  }, []);
+
   return (
     <main id="producto" className="containercard__ flex__card row mb-4 g-0 rounded overflow-hidden flex-lg-row flex-column h-md-250 position-relative">
       <div className="card__img col-auto">
@@ -26,9 +50,9 @@ export const ItemDetail = ({ producto }) => {
           {producto.precio}
         </p>
 
-        <Contador precio={producto.precio} stock={producto.stock} />
+        <Contador precio={producto.precio} stock={producto.stock} contador={contador} />
 
-        <Link className="btn py-2 ms-3 mb-3" to={`/`}>
+        <Link className="btn py-2 ms-3 mb-3" onClick={() => agregar(contador.count)} to={`/`}>
           Agregar al carrito
         </Link>
       </figcaption>
