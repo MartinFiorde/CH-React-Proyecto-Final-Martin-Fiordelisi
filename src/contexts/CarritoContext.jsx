@@ -11,7 +11,7 @@ export const CarritoProvider = ({ children }) => {
       carrito.splice(index, 1);
     }
     // FORMA CON METODOS PRIMITIVOS/NATIVOS DE JS    // const newCart = carrito.slice()    // newCart.push({ ...item, count })    // setCarrito(newCart);
-    setCarrito([...carrito, itemNuevo]); // FORMA SINTETICA USANDO UN ARRAY LITERAL LLENADO CON ELEMENTOS DESESTRUCTURADOS
+    setCarrito([...carrito, itemNuevo]); // FORMA SINTETICA USANDO UN ARRAY LITERAL LLENADO CON UN SPREAD DE LOS ELEMENTOS DE OTRO OBJETO
   };
 
   const eliminarDelCarrito = (itemABorrar) => {
@@ -20,6 +20,8 @@ export const CarritoProvider = ({ children }) => {
     //   carrito.splice(index, 1);
     // }
     // setCarrito([...carrito]);
+    
+    // ABAJO SE APLICA UN CRITERIO != PARA FILTRAR CARRITO CON TODO MENOS EL ITEM A BORRAR
     setCarrito(carrito.filter((item)=> item.id != itemABorrar.id))
   };
 
