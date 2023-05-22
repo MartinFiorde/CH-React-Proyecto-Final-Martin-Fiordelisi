@@ -1,20 +1,22 @@
 import "./Producto.scss";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { importarProductos } from "../../helpers/importarProductos";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail";
 import { useCount } from "../../hooks/useCount";
+import { CarritoContext } from "./../../contexts/CarritoContext";
 
 export const ItemDetailContainer = () => {
+  const { agregarAlCarrito } = useContext(CarritoContext);
+
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
   const contador = useCount(1, 1, item?.stock);
   const { count } = contador;
-  console.log("contador", contador);
 
   const handleAgregar = (count) => {
-    console.log({ ...item, count });
+    agregarAlCarrito({ ...item, count }); // envio a la funcion > un objeto completado con las variables de ...item, y le agrego el atributo count a ese nuevo objeto
   };
 
   useEffect(() => {

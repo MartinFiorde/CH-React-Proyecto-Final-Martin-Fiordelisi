@@ -1,4 +1,4 @@
-import "./Tienda.scss";
+import "./ItemList.scss";
 import { ItemList } from "./ItemList";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -9,7 +9,6 @@ export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
-  console.log(loading);
   useEffect(() => {
     setLoading(true);
     importarProductos()

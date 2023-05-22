@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { Contador } from "./Contador";
-import { useEffect } from "react";
+import { useContext } from "react";
+import { CarritoContext } from "../../contexts/CarritoContext";
 
 export const ItemDetail = ({ producto, contador, agregar }) => {
+  const { itemCountInCart, eliminarDelCarrito } = useContext(CarritoContext);
+  /*
   // handler de evento React
   const agregarAlCarrito = (event) => {
     event.preventDefault();
@@ -24,6 +27,7 @@ export const ItemDetail = ({ producto, contador, agregar }) => {
       window.removeEventListener("click", windowClickHandler);
     };
   }, []);
+  */
 
   return (
     <main id="producto" className="containercard__ flex__card row mb-4 g-0 rounded overflow-hidden flex-lg-row flex-column h-md-250 position-relative">
@@ -50,11 +54,23 @@ export const ItemDetail = ({ producto, contador, agregar }) => {
           {producto.precio}
         </p>
 
-        <Contador precio={producto.precio} stock={producto.stock} contador={contador} />
+        <Contador producto={producto} contador={contador} />
 
-        <Link className="btn py-2 ms-3 mb-3" onClick={() => agregar(contador.count)} to={`/`}>
-          Agregar al carrito
-        </Link>
+        {itemCountInCart(producto.id) ? (
+          <>
+            <Link className="btn py-2 ms-3 mb-3" onClick={() => agregar(contador.count)} to={`/carrito`}>
+              Ir al carrito
+            </Link>
+
+            {/* <button className="btn py-2 ms-3 mb-3" onClick={() => eliminarDelCarrito(producto)} to={`/tienda`}>
+              Eliminar del carrito
+            </button> */}
+          </>
+        ) : (
+          <Link className="btn py-2 ms-3 mb-3" onClick={() => agregar(contador.count)} to={`/carrito`}>
+            Agregar al carrito
+          </Link>
+        )}
       </figcaption>
     </main>
   );

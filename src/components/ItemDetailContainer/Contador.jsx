@@ -1,7 +1,15 @@
-import { useCount } from "./../../hooks/useCount";
+import { useContext, useEffect } from "react";
+import { CarritoContext } from "./../../contexts/CarritoContext";
 
-export const Contador = ({ precio, contador }) => {
-  const { count, aumentar, reducir } = contador;
+export const Contador = ({ producto, contador }) => {
+  const { count, aumentar, reducir, setear } = contador;
+  const { carrito } = useContext(CarritoContext);
+
+  useEffect(() => {
+    if (carrito.some((item) => producto.id === item.id)) {
+      setear(carrito.find((item) => producto.id === item.id).count);
+    }
+  }, []);
 
   return (
     <>
@@ -17,7 +25,7 @@ export const Contador = ({ precio, contador }) => {
       </div>
       <p className="card-text py-0">
         <strong>Valor total: </strong>
-        {precio * count}
+        {producto.precio * count}
       </p>
     </>
   );
