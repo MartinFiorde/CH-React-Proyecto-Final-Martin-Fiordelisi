@@ -2,21 +2,28 @@
 @import "../../styles/mixins";
 
 #ficha {
-  .card__ {
-    border-radius: 40px !important;
+    .card__ {
+        border-radius: 40px !important;
 
-    &text {
-      font-family: $secondFontFamily;
+        &text {
+            font-family: $secondFontFamily;
 
-      strong {
-        display: inline;
-      }
+            strong {
+                display: inline;
+            }
+        }
+
+        &img__content {
+            width: 250px;
+            height: 250px;
+            border-radius: 50% !important;
+        }
+
+        .btn {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            display: inline;
+            width: 130px;
+        }
     }
-
-    &img__content {
-      width: 250px;
-      height: 250px;
-      border-radius: 50% !important;
-    }
-  }
 }

@@ -1,6 +1,16 @@
 import './Ficha.scss'
+import { useContext } from 'react';
+import { AuthContext } from './../../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 export const Ficha = () => {
+    const { logout } = useContext(AuthContext);
+
+    const handleLogout = (e) => {
+      e.preventDefault();
+      logout();
+  };
+
     return (
         <main id="ficha" className="container">
             <section className="section">
@@ -19,6 +29,7 @@ export const Ficha = () => {
                     <p className="card-text py-0"><strong>IMC: </strong>70 kg</p>
                     <p className="card-text py-0"><strong>Calorías diarias quemadas: </strong>2375 kcal</p>
                     <p className="card-text py-0 pb-3"><strong>Promedio horas semanales entrenadas: </strong>06:35 hs</p>
+                    <Link className="btn py-2" onClick={handleLogout} to={"/logout"}>Logout</Link>
                 </figcaption>
             </figure>
         </main>

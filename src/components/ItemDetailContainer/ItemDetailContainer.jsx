@@ -15,9 +15,8 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
   const contador = useCount(1, 1, item?.stock);
 
-  const { count } = contador;
-  const handleAgregar = () => {
-    agregarAlCarrito({ ...item, count }); // envio a la funcion > un objeto completado con las variables de ...item, y le agrego el atributo count a ese nuevo objeto
+  const handleAgregar = (count) => {
+    agregarAlCarrito({ ...item, count }); // envio a la funcion un objeto completado con las variables de ...item, y le agrego el atributo count a ese nuevo objeto
   };
 
   useEffect(() => {

@@ -32,7 +32,12 @@ export const ItemDetail = ({ producto, contador, agregar }) => {
   return (
     <main id="producto" className="containercard__ flex__card row mb-4 g-0 rounded overflow-hidden flex-lg-row flex-column h-md-250 position-relative">
       <div className="card__img col-auto">
-        <img className="card__img__content bd-placeholder-img rounded shadow-sm m-4" src={producto.img} alt={producto.producto} aria-label="Placeholder: imagen del producto" focusable="false" />
+        <img 
+          className="card__img__content bd-placeholder-img rounded shadow-sm m-4" 
+          src={producto.img} 
+          alt={producto.producto} 
+          aria-label="Placeholder: imagen del producto" 
+          focusable="false" />
       </div>
       <figcaption className="card__text col p-2 pe-0 d-flex flex-column position-static">
         <h2 className="card__title d-inline-block mb-0">{producto.producto}</h2>
