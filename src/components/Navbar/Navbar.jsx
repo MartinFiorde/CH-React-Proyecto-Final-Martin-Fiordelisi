@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <nav className="container navbar navbar-expand-lg">
       <div className="container-fluid">
-        <Link className="navbar-brand nav__logo" to="/index">
+        <Link className="navbar-brand nav__logo" to="/inicio">
           <img src="../img/logo.png" alt="logo fit tracker" />
         </Link>
         <button className="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

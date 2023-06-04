@@ -1,7 +1,12 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import { NavbarNoLogued } from './../components/Navbar/NavbarNoLogued';
 import { Navbar } from "../components/Navbar/Navbar";
 import { Footer } from "../components/Footer/Footer";
+
+import { Error404 } from "../components/Error404/Error404";
+import { Register } from './../components/Register/Register';
+import { Login } from './../components/Login/Login';
 
 import { Landing } from "../components/Landing/Landing";
 import { Ficha } from "../components/Ficha/Ficha";
@@ -11,13 +16,10 @@ import { Contacto } from "../components/Contacto/Contacto";
 import { ItemListContainer } from "../components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "../components/ItemDetailContainer/ItemDetailContainer";
 import { CarritoContainer } from '../components/Carrito/CarritoContainer';
-import { Error404 } from "../components/Error404/Error404";
-import { NavbarNoLogued } from './../components/Navbar/NavbarNoLogued';
+import { CheckoutContainer } from './../components/Checkout/CheckoutContainer';
+
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
-import { Register } from './../components/Register/Register';
-import { Login } from './../components/Login/Login';
-
 
 export default function AppRouter() {
   const { user } = useContext(AuthContext);
@@ -28,7 +30,6 @@ export default function AppRouter() {
           ? <>
             <Navbar />
             <Routes>
-              
               <Route path="/" element={<Navigate to={"/inicio"} />} />
               <Route path="/login" element={<Navigate to={"/inicio"} />} />
               <Route path="/registro" element={<Navigate to={"/inicio"} />} />
@@ -41,7 +42,7 @@ export default function AppRouter() {
               <Route path="/tienda/:id" element={<ItemListContainer />} />
               <Route path="/producto/:id" element={<ItemDetailContainer />} />
               <Route path="/carrito" element={<CarritoContainer />} />
-              <Route path="/logout" element={<Navigate to={"/inicio"} />} />
+              <Route path="/checkout" element={<CheckoutContainer />} />
               <Route path="/*" element={<Error404 />} />
             </Routes>
             <Footer /> 

@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
         email: null,
         logged: false
     })
-    console.log("localUser",localUser);
+    // console.log("localUser",localUser);
 
     const login = (values) => {
         signInWithEmailAndPassword(auth, values.email, values.password)
@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
-            console.log("user", user);
+            // console.log("user", user);
             if (user) {
                 setLocalUser({
                     email: user.email,

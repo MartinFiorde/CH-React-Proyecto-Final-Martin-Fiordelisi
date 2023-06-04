@@ -14,6 +14,10 @@ export const CarritoProvider = ({ children }) => {
     setCarrito([...carrito, itemNuevo]); // FORMA SINTETICA USANDO UN ARRAY LITERAL LLENADO CON UN SPREAD DE LOS ELEMENTOS DE OTRO OBJETO
   };
 
+  const vaciarCarrito = () => {
+      setCarrito([]);  
+}
+
   const eliminarDelCarrito = (itemABorrar) => {
     // if (carrito.some((item) => item.id === itemABorrar.id)) {
     //   const index = carrito.indexOf(carrito.find((item) => item.id === itemABorrar.id));
@@ -46,7 +50,7 @@ export const CarritoProvider = ({ children }) => {
 
   return (
     <>
-      <CarritoContext.Provider value={{ carrito, cantidadTotal, precioTotal, itemCountInCart, agregarAlCarrito, eliminarDelCarrito }}>{children}</CarritoContext.Provider>;
+      <CarritoContext.Provider value={{ carrito, vaciarCarrito, cantidadTotal, precioTotal, itemCountInCart, agregarAlCarrito, eliminarDelCarrito }}>{children}</CarritoContext.Provider>;
     </>
   );
 };
