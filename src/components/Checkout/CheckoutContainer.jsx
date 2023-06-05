@@ -10,8 +10,8 @@ import withReactContent from 'sweetalert2-react-content';
 import { Checkout } from './Checkout';
 
 // SweetAlert2
-const MySwal = withReactContent(Swal)
-const baseStyle = MySwal.mixin({
+const MySwal = withReactContent(Swal);
+const swalBaseStyle = MySwal.mixin({
     customClass: {
         confirmButton: 'btn py-3 px-5',
         cancelButton: 'btn'
@@ -19,7 +19,7 @@ const baseStyle = MySwal.mixin({
     buttonsStyling: false
 })
 
-// Componente Checkout
+// Componente CheckoutContainer
 export const CheckoutContainer = () => {
 
     const { user } = useContext(AuthContext);
@@ -28,7 +28,7 @@ export const CheckoutContainer = () => {
         nombre: '',
         codigoPostal: '',
         calle: '',
-        pisoDepto: '',
+        telefono: '',
     });
 
     if (carrito.length == 0) {
@@ -36,10 +36,10 @@ export const CheckoutContainer = () => {
     };
 
     const validaciones = (values) => {
-        const { nombre, calle, codigoPostal } = values;
+        const { nombre, calle, codigoPostal, telefono } = values;
 
         if (nombre.length < 5) {
-            baseStyle.fire(
+            swalBaseStyle.fire(
                 '',
                 'El nombre es demasiado corto',
                 'warning'
@@ -47,7 +47,7 @@ export const CheckoutContainer = () => {
             return null;
         }
         if (codigoPostal < 1000 || codigoPostal > 9999) {
-            baseStyle.fire(
+            swalBaseStyle.fire(
                 '',
                 'El código postal debe contener 4 digitos válidos',
                 'warning'
@@ -55,10 +55,19 @@ export const CheckoutContainer = () => {
             return null;
         }
 
-        if (calle.length < 10) {
-            baseStyle.fire(
+        if (calle.length < 5) {
+            swalBaseStyle.fire(
                 '',
-                'La dirección no es válida',
+                'La dirección es demasiado corta',
+                'warning'
+            )
+            return null;
+        }
+
+        if (telefono.length < 5) {
+            swalBaseStyle.fire(
+                '',
+                'El numero telefónico es demasiado corto',
                 'warning'
             )
             return null;
@@ -68,7 +77,7 @@ export const CheckoutContainer = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { nombre, pisoDepto, calle, codigoPostal } = values;
+        const { nombre, calle, telefono, codigoPostal } = values;
 
         if (!validaciones(values)) {
             return null;
@@ -76,28 +85,27 @@ export const CheckoutContainer = () => {
 
         const ordenDeCompra = {
             client: nombre,
+            email: user.email,
             items: carrito.map(item => ({ id: item.id, producto: item.producto, count: item.count })),
             totalValue: precioTotal(),
             ItemsCuantity: cantidadTotal(),
-            direccion: `Calle: ${calle}, Piso/Dto: ${pisoDepto ? pisoDepto : "-"}, CP: ${codigoPostal}`,
-            timestamp: new Date(),
+            adress: `Calle: ${calle}, CP: ${codigoPostal}`,
+            phone: telefono,
+            status: "GENERATED",
+            timestamp: new Date()
         }
+        
         console.log("Orden de compra", ordenDeCompra);
         const ordersRef = collection(db, "ordenesDeCompra");
-
         addDoc(ordersRef, ordenDeCompra)
             .then((doc) => {
                 console.log("doc", doc.id);
-                baseStyle.fire(
+                swalBaseStyle.fire(
                     'Compra terminada!',
                     'En breve estarás recibiendo novedades del distribuidor.\nTu numero de orden es el siguiente. Anotalo! \n' + doc.id,
                     'success'
                 )
-                    .then((result) => {
-                        setTimeout(() => {
-                            vaciarCarrito();
-                        }, 1000);
-                    });
+                    .then((result) => vaciarCarrito());
             })
     };
 

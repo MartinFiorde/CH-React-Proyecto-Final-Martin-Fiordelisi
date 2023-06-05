@@ -32,15 +32,14 @@ export const Checkout = ({handleSubmit, handleInputChange, user, precioTotal, fo
                             name="calle"
                             onChange={handleInputChange}
                         />
-                        <label htmlFor="nombre">Piso/ Depto</label>
+                        <label htmlFor="nombre">Telefono</label>
                         <input
-                            id="pisoDepto"
+                            id="telefono"
                             value={formValues.pisoDepto}
                             type="text"
                             className="form-control mb-2"
-                            name="pisoDepto"
+                            name="telefono"
                             onChange={handleInputChange}
-                            maxlength="10"
                         />
                         <label htmlFor="email">Email</label>
                         <input
