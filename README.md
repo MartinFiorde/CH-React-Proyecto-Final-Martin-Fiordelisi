@@ -4,6 +4,8 @@ Hola a todos! este repositorio contiene el resultado final de 2 meses de cursado
 
 La aplicación fue desarrollada con el fin de generar un entorno dinámico donde usuario poseatodas las opciones necesarias para interactuar con un E-commerce, desde el filtrado y selección de productos hasta la generación de una orden de compra que persista en una base de datos (el detalle de la orden guardada se puede ver en consola al finalizar la compra). 
 
+<p><a href="https://github.com/MartinFiorde/CH-React-Proyecto-Final-Martin-Fiordelisi/blob/main/checkout.jpg?raw=true" target="_blank"><img src="https://github.com/MartinFiorde/CH-React-Proyecto-Final-Martin-Fiordelisi/blob/main/checkout.jpg?raw=true" alt="checkout" width="50%" height="50%"/></a></p>
+
 Link al portal en Netlify: https://ch-react-pf-maf.netlify.app/
 
 
