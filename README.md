@@ -8,7 +8,7 @@ La aplicación fue desarrollada con el fin de generar un entorno dinámico donde
 
 Link al portal en Netlify: https://ch-react-pf-maf.netlify.app/
 
-
+<br/>
 Para este proyecto se utilizaron las siguientes tecnologías:
 * React.js como principal biblioteca de desarrollo
 * JavaScript con extensión JSX como principal lenguaje de programación
@@ -17,13 +17,13 @@ Para este proyecto se utilizaron las siguientes tecnologías:
 * Netlify como host de las funcionalidades frontend
 * Firebase como soporte de las funcionalidades backend y de persistencia
 
-
+<br/>
 Adicionalmente se implementaron dependencias auxiliares como:
 * Bootstrap para la generación de estilos genéricos
 * Sass para la generación de estilos customizados
 * SweetAlert2 para la generación de ventanas emergentes customizadas
 
-
+<br/>
 A continuación se detallan los componentes y funcionalidades complementarios implementados por fuera de los contenidos mínimos requeridos en la cursada:
 * Desarrollo de un custom hook que le permite al usuario modificar la cantidad seleccionada de un producto en cualquier momento de la compra.
 * Implementada la componetización de archivos de estilo Sass para que se integren mejor con la estructura de React.
@@ -31,7 +31,7 @@ A continuación se detallan los componentes y funcionalidades complementarios im
 * Portal de error 404 que redirige automaticamente al inicio en caso de ingresar a urls invalidas. 
 * Testeo y revisión detallado de la aplicación, corrigiendo multiples errores grandes y chicos de código, para lograr ofrecer una experiencia de usuario sólida y con la menor cantidad posible de bugs y comportamientos indeseados.
 
-
+<br/>
 Funcionalidades pendientes de implementación por limitaciones de tiempo:
 * Integrar la solapa de "Contacto" a firebase para permitir la persistencia de mensajes que pueda enviar el usuario.
 * Integrar con React la lógica de "Entrenamiento" desarrollada en JS nativo del curso anterior (https://github.com/MartinFiorde/CH-JS---Proyecto-Final-Martin-Fiordelisi). La versión actual accesible en el proyecto es una versión estática.
@@ -39,6 +39,7 @@ Funcionalidades pendientes de implementación por limitaciones de tiempo:
 
 
 El sitio web fue testeado en Google Chrome y Mozilla Firefox. La funcionalidad propia de la sección Tienda > Carrito > Checkout es 100% funcional en los navegadores web testeados, existiendo únicamente algunos bugs de accesibilidad y diseño, detallados a continuación:
+
     * Ligeros cambios de diseño no intencionados en Mozilla Firefox.
     * Al navegar por la página, algunas vistas se generan incorrectamente por un instante hasta que la vista condicional correcta es procesada por el ReactDOM (ej, navbar offline apareciendo fugazmente al iniciar la página cuando el usuario ya se encuentra previamente logueado).
     * Al navegar demasiado rápido por las vistas de Tienda > Carrito > Checkout, algunas veces el menú de tienda o checkout reenvian a la página de inicio por una falla de sincronización entre la aplicación y los componentes de persistencia (hooks y/o firebase).
