@@ -36,7 +36,8 @@ A continuación se detallan los componentes y funcionalidades complementarios im
 
 <br/>
 
-Funcionalidades pendientes de implementación por limitaciones de tiempo:
+Funcionalidades quitadas/ pendientes de implementación por limitaciones de tiempo:
+* Actualización de los stocks al generar ordenes de compra.
 * Integrar la solapa de "Contacto" a firebase para permitir la persistencia de mensajes que pueda enviar el usuario.
 * Integrar con React la lógica de "Entrenamiento" desarrollada en JS nativo del curso anterior (https://github.com/MartinFiorde/CH-JS---Proyecto-Final-Martin-Fiordelisi). La versión actual accesible en el proyecto es una versión estática.
 * Integrar una vista a un submenu de "Mis Compras", y una vista para ver el detalle individual de cada orden de compra y seguimiento de su estado.

@@ -1,0 +1,172 @@
+[{
+    "id": 1,
+    "producto": "Suplemento de proteina",
+    "categoria": "Suplemento",
+    "precio": 2134,
+    "detalle": "Suplemento en polvo Hardcore Nutrition Ultra Gold Qualitty Whey Protein proteínas sabor chocolate en sachet de 1kg",
+    "vendedor": "Hardcore Nutrition",
+    "stock": 20,
+    "img": "../img/productos/proteina-hardcore.webp"
+},
+{
+    "id": 2,
+    "producto": "Suplemento (combo)",
+    "categoria": "Suplemento",
+    "precio": 10925,
+    "detalle": "4 Kg De Proteína Whey Protein (4 De 1 Kg) + 1 Kg De Creatina",
+    "vendedor": "Hardcore Nutrition",
+    "stock": 5,
+    "img": "../img/productos/combo-hardcore.webp"
+},
+{
+    "id": 3,
+    "producto": "Suplemento de creatina",
+    "categoria": "Suplemento",
+    "precio": 11650,
+    "detalle": "Suplemento en polvo Star Nutrition Creatina 100% Pura en pote de 300g",
+    "vendedor": "Star Nutrition",
+    "stock": 10,
+    "img": "../img/productos/creatina-star.webp"
+},
+{
+    "id": 4,
+    "producto": "Suplemento de proteina",
+    "categoria": "Suplemento",
+    "precio": 6785,
+    "detalle": "Suplemento en polvo Star Nutrition Platinum Whey Protein proteína sabor vanilla ice cream en pote de 907g",
+    "vendedor": "Star Nutrition",
+    "stock": 20,
+    "img": "../img/productos/proteina-star.webp"
+},
+{
+    "id": 5,
+    "producto": "Suplemento de proteina",
+    "categoria": "Suplemento",
+    "precio": 7500,
+    "detalle": "Suplemento en polvo ENA Sport True Made proteínas sabor banana shake en pote de 930g",
+    "vendedor": "ENA Sport",
+    "stock": 20,
+    "img": "../img/productos/proteina-ena.webp"
+},
+{
+    "id": 6,
+    "producto": "Vaso Batidor",
+    "categoria": "Recipiente",
+    "precio": 5295,
+    "detalle": "Vaso Batidor Shaker Everlast Mezclador Proteinas Con Filtro",
+    "vendedor": "Everlast",
+    "stock": 10,
+    "img": "../img/productos/vaso-mezclador-everlast.webp"
+},
+{
+    "id": 7,
+    "producto": "Vaso Batidor",
+    "categoria": "Recipiente",
+    "precio": 780,
+    "detalle": "Vaso Shaker Proteina Batidos MAXPR O Line Rojo",
+    "vendedor": "BSX Max Pro",
+    "stock": 10,
+    "img": "../img/productos/vaso-mezclador-bsx.webp"
+},
+{
+    "id": 8,
+    "producto": "Botella",
+    "categoria": "Recipiente",
+    "precio": 11990,
+    "detalle": "Botella Térmica Deportiva 750 Ml Acero Inoxidable Explorer",
+    "vendedor": "Explorer",
+    "stock": 20,
+    "img": "../img/productos/botella-explorer.webp"
+},
+{
+    "id": 9,
+    "producto": "Botella (combo)",
+    "categoria": "Recipiente",
+    "precio": 6290,
+    "detalle": "Bolso Termico Canasto + 12 Caramañolas Botellas Hidratacion",
+    "vendedor": "DC SPORTS",
+    "stock": 5,
+    "img": "../img/productos/botella-combo.webp"
+},
+{
+    "id": 10,
+    "producto": "Botella",
+    "categoria": "Recipiente",
+    "precio": 750,
+    "detalle": "Botella Deportiva Plastica Agua 750ml Excelente Calidad",
+    "vendedor": "MrGym",
+    "stock": 20,
+    "img": "../img/productos/botella-agua.webp"
+},
+{
+    "id": 11,
+    "producto": "Zapatilla",
+    "categoria": "Indumentaria",
+    "precio": 15406,
+    "detalle": "Zapatillas Puma Running Flyer Flex Adp Hombre Ng Bl",
+    "vendedor": "Puma",
+    "stock": 10,
+    "img": "../img/productos/zapatilla-puma.webp"
+},
+{
+    "id": 12,
+    "producto": "Zapatilla",
+    "categoria": "Indumentaria",
+    "precio": 26979,
+    "detalle": "Zapatillas Response Super 3.0 adidas",
+    "vendedor": "Adidas",
+    "stock": 10,
+    "img": "../img/productos/zapatilla-adidas.webp"
+},
+{
+    "id": 13,
+    "producto": "Remera",
+    "categoria": "Indumentaria",
+    "precio": 3049,
+    "detalle": "Remera Termica Manga Larga Gdo Nieve Ski Primera Piel",
+    "vendedor": "Gol de Oro",
+    "stock": 20,
+    "img": "../img/productos/remera-termica.webp"
+},
+{
+    "id": 14,
+    "producto": "Mancuerna",
+    "categoria": "Pesas",
+    "precio": 2036,
+    "detalle": "Mancuerna Pesa Pvc Rellena Premium 5 Kg Por Unidad",
+    "vendedor": "MrGym",
+    "stock": 10,
+    "img": "../img/productos/mancuerna-5kg-pvc.webp"
+},
+{
+    "id": 15,
+    "producto": "Mancuerna regulable",
+    "categoria": "Pesas",
+    "precio": 12700,
+    "detalle": "Set Mancuerna Cromada Maciza + rosca + goma + discos + 10kg - El Rey",
+    "vendedor": "Expert",
+    "stock": 5,
+    "img": "../img/productos/mancuerna-10kg-metal.webp"
+},
+{
+    "id": 16,
+    "producto": "Mancuerna regulable",
+    "categoria": "Pesas",
+    "precio": 14092,
+    "detalle": "Kit 24 Set 2 Mancuernas + 24 Kg. Discos Pvc",
+    "vendedor": "Sonnos",
+    "stock": 3,
+    "img": "../img/productos/mancuerna-barra-combo.webp"
+},
+{
+    "id": 17,
+    "producto": "Barra y mancuerna (combo)",
+    "categoria": "Pesas",
+    "precio": 18982,
+    "detalle": "Kit 2 Mancuernas + Barra + 24 Kg. Discos Pesas Pvc Sonnos",
+    "vendedor": "Sonnos",
+    "stock": 3,
+    "img": "../img/productos/mancuerna-combo.webp"
+}
+]
+
