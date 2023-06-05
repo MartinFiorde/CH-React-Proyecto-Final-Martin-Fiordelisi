@@ -9,6 +9,7 @@ La aplicación fue desarrollada con el fin de generar un entorno dinámico donde
 Link al portal en Netlify: https://ch-react-pf-maf.netlify.app/
 
 <br/>
+
 Para este proyecto se utilizaron las siguientes tecnologías:
 * React.js como principal biblioteca de desarrollo
 * JavaScript con extensión JSX como principal lenguaje de programación
@@ -18,12 +19,14 @@ Para este proyecto se utilizaron las siguientes tecnologías:
 * Firebase como soporte de las funcionalidades backend y de persistencia
 
 <br/>
+
 Adicionalmente se implementaron dependencias auxiliares como:
 * Bootstrap para la generación de estilos genéricos
 * Sass para la generación de estilos customizados
 * SweetAlert2 para la generación de ventanas emergentes customizadas
 
 <br/>
+
 A continuación se detallan los componentes y funcionalidades complementarios implementados por fuera de los contenidos mínimos requeridos en la cursada:
 * Desarrollo de un custom hook que le permite al usuario modificar la cantidad seleccionada de un producto en cualquier momento de la compra.
 * Implementada la componetización de archivos de estilo Sass para que se integren mejor con la estructura de React.
@@ -32,6 +35,7 @@ A continuación se detallan los componentes y funcionalidades complementarios im
 * Testeo y revisión detallado de la aplicación, corrigiendo multiples errores grandes y chicos de código, para lograr ofrecer una experiencia de usuario sólida y con la menor cantidad posible de bugs y comportamientos indeseados.
 
 <br/>
+
 Funcionalidades pendientes de implementación por limitaciones de tiempo:
 * Integrar la solapa de "Contacto" a firebase para permitir la persistencia de mensajes que pueda enviar el usuario.
 * Integrar con React la lógica de "Entrenamiento" desarrollada en JS nativo del curso anterior (https://github.com/MartinFiorde/CH-JS---Proyecto-Final-Martin-Fiordelisi). La versión actual accesible en el proyecto es una versión estática.
