@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Entrenamientos.scss'
 import "https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js";
 // import "../../js/entrenamientos"
