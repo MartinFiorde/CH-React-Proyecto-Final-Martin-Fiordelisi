@@ -26,7 +26,7 @@ export const EntrenamientosContainer = () => {
                                 <p className="card-text"><strong>Duración: </strong><br />00:39:20 hs</p>
                                 <p className="card-text"><strong>Calorias: </strong><br />272 kcal</p>
                                 <p className="card-text"><strong>Vel. Prom.: </strong><br />9.55 km/h</p>
-                                <a href="../404.html" className="card__ stretched-link"></a>
+                                <Link className="card__ stretched-link" to={`/404`}></Link>
                             </figcaption>
                             <div className="card__img col-auto d-none d-lg-block">
                                 <img className="card__img__content bd-placeholder-img rounded shadow-sm m-4" src="../img/entrenamientos/ciclismo.jpg" alt="icono ciclismo" aria-label="Placeholder: icono ciclismo" focusable="false" />
@@ -41,7 +41,7 @@ export const EntrenamientosContainer = () => {
                                 <p className="card-text"><strong>Duración: </strong><br />01:00:00 hs</p>
                                 <p className="card-text"><strong>Calorias: </strong><br />414 kcal</p>
                                 <p className="card-text"><strong>Frec. Card. Prom.: </strong><br />127 lpm</p>
-                                <a href="../404.html" className="card__ stretched-link"></a>
+                                <Link className="card__ stretched-link" to={`/404`}></Link>
                             </figcaption>
                             <div className="card__img col-auto d-none d-lg-block">
                                 <img className="card__img__content bd-placeholder-img rounded shadow-sm m-4" src="../img/entrenamientos/karate.jpg" alt="icono artes marciales" aria-label="Placeholder: icono artes marciales" preserveAspectRatio="xMidYMid slice" focusable="false" />
@@ -56,7 +56,7 @@ export const EntrenamientosContainer = () => {
                                 <p className="card-text"><strong>Duración: </strong><br />01:00:00 hs</p>
                                 <p className="card-text"><strong>Calorias: </strong><br />398 kcal</p>
                                 <p className="card-text"><strong>Frec. Card. Prom.: </strong><br />106 lpm</p>
-                                <a href="../404.html" className="card__ stretched-link"></a>
+                                <Link className="card__ stretched-link" to={`/404`}></Link>
                             </figcaption>
                             <div className="card__img col-auto d-none d-lg-block">
                                 <img className="card__img__content bd-placeholder-img rounded shadow-sm m-4" src="../img/entrenamientos/elongar.jpg" alt="icono elongación" aria-label="Placeholder: icono elongación" preserveAspectRatio="xMidYMid slice" focusable="false" />
@@ -71,7 +71,7 @@ export const EntrenamientosContainer = () => {
                                 <p className="card-text"><strong>Duración: </strong><br />01:00:00 hs</p>
                                 <p className="card-text"><strong>Calorias: </strong><br />398 kcal</p>
                                 <p className="card-text"><strong>Frec. Card. Prom.: </strong><br />106 lpm</p>
-                                <a href="../404.html" className="card__ stretched-link"></a>
+                                <Link className="card__ stretched-link" to={`/404`}></Link>
                             </figcaption>
                             <div className="card__img col-auto d-none d-lg-block">
                                 <img className="card__img__content bd-placeholder-img rounded shadow-sm m-4" src="../img/entrenamientos/correr.jpg" alt="icono running" aria-label="Placeholder: icono running" preserveAspectRatio="xMidYMid slice" focusable="false" />
