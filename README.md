@@ -32,7 +32,7 @@ A continuación se detallan los componentes y funcionalidades complementarios im
 * Implementada la componetización de archivos de estilo Sass para que se integren mejor con la estructura de React.
 * Implementado un sistema integrado a Firebase de registro, login y logout (el botón de logout se encuentra dentro de "Ficha").
 * Portal de error 404 que redirige automaticamente al inicio en caso de ingresar a urls invalidas. 
-* Testeo y revisión detallado de la aplicación, corrigiendo multiples errores grandes y chicos de código, para lograr ofrecer una experiencia de usuario sólida y con la menor cantidad posible de bugs y comportamientos indeseados.
+* Testeo y revisión detallado de la aplicación, corrigiendo multiples errores grandes y chicos de código, para lograr ofrecer una experiencia de usuario sólida y con la menor cantidad posible de bugs (se priorizó la calidad de las funciones actuales, por sobre cantidad de funcionalidades a medio hacer).
 
 <br/>
 
@@ -42,6 +42,7 @@ Funcionalidades quitadas/ pendientes de implementación por limitaciones de tiem
 * Integrar con React la lógica de "Entrenamiento" desarrollada en JS nativo del curso anterior (https://github.com/MartinFiorde/CH-JS---Proyecto-Final-Martin-Fiordelisi). La versión actual accesible en el proyecto es una versión estática.
 * Integrar una vista a un submenu de "Mis Compras", y una vista para ver el detalle individual de cada orden de compra y seguimiento de su estado.
 
+<br/>
 
 El sitio web fue testeado en Google Chrome y Mozilla Firefox. La funcionalidad propia de la sección Tienda > Carrito > Checkout es 100% funcional en los navegadores web testeados, existiendo únicamente algunos bugs de accesibilidad y diseño, detallados a continuación:
 
